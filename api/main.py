@@ -19,7 +19,8 @@ def get_items():
 
 @app.post('/test')
 async def test():
-    item = Item(name=datetime.now())
+    now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+    item = Item(name=now)
     items.append(item)
     return item
 
