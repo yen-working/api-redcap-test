@@ -23,6 +23,6 @@ async def test():
     items.append(item)
     return item
 
-@app.post('/')
+@app.get('')
 def home():
     return "Hello, Woooo"
