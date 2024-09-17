@@ -22,3 +22,7 @@ async def test():
     item = Item(name=datetime.now())
     items.append(item)
     return item
+
+@app.post('/')
+def home():
+    return "Hello, Woooo"
