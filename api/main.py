@@ -19,9 +19,6 @@ def get_items():
 
 @app.post('/test')
 async def test():
-    # tests.append(el)
-    # el = el + 1
-    item = Item()
-    item.name = datetime.now()
+    item = Item(name=datetime.now())
     items.append(item)
     return item
