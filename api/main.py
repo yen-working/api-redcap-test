@@ -30,7 +30,11 @@ async def create_item(item: Item):
     items.append(item)
     return item
 
-@app.get("/all")
+@app.get("/allTests")
+def get_tests():
+    return tests
+
+@app.get("/allItems")
 def get_items():
     return items
 
