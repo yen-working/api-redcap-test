@@ -36,4 +36,5 @@ def get_items():
 
 @app.post('/testPost')
 async def test(det: RedCapDET):
-    return det
+    tests.append(det)
+    return tests
