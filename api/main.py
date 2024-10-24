@@ -21,9 +21,6 @@ async def create_item(item: Item):
 def get_items():
     return items
 
-@app.post('/test')
+@app.post('/testPost')
 async def test():
-    now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
-    item = Item(name=now)
-    items.append(item)
-    return item
+    return {"message": "POST request success"}
