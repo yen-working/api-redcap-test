@@ -8,6 +8,10 @@ app = FastAPI()
 items = []
 tests = []
 
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
 @app.post("/items/")
 async def create_item(item: Item):
     items.append(item)
@@ -23,7 +27,3 @@ async def test():
     item = Item(name=now)
     items.append(item)
     return item
-
-@app.get('')
-def home():
-    return "Hello, Woooo"
